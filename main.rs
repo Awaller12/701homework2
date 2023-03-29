@@ -400,70 +400,7 @@ fn main() {
     let duration = rank_time.elapsed();
    // println!("Time of 8 rank queries: {:?}", duration);
     //print!("{:?}", select.overhead());
-
-
-   // select.select1(2);
-    // select.select1(12);
-    // select.select1(23);
-    // select.select1(32);
-    // select.select1(47);
-    // select.select1(59);
-    // select.select1(69);
-    // select.select1(78);
-
-    // rank.rank1(2);
-    // rank.rank1(12);
-    // rank.rank1(23);
-    // rank.rank1(32);
-    // rank.rank1(47);
-    // rank.rank1(59);
-    // rank.rank1(69);
-    // rank.rank1(78);
-
-    
-
-    let size = 1000;
-
-    let mut vec = Sparse::create(size);
-
-    
-    let mut rng = thread_rng();
-    for i in 0..size {
-        let bool0 = rng.gen_bool(0.25);
-        if bool0 {
-            vec.append("tired".to_string(), i);
-        }
-    }
-
-    let mut peas = "yay".to_string();
-
-    //get_index_at
-    let get_index = Instant::now();
-    vec.get_at_index(500, &mut peas);
-    println!("{:?}", get_index.elapsed());
-
-    //finalize
-    let f = Instant::now();
-    vec.finalize();
-    println!("{:?}", f.elapsed());
-
-    //get_index_of
-    let get_of = Instant::now();
-    vec.get_index_of(498);
-    println!("{:?}", get_of.elapsed());
-
-
-    //num_elem_at
-    let num = Instant::now();
-    vec.num_elem_at(700);
-    println!("{:?}", num.elapsed());
-    
-    //size
-    let size = Instant::now();
-    vec.size();
-    println!("{:?}", size.elapsed());
-
-    
+ 
 
 
 }
